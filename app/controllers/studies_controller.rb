@@ -6,14 +6,17 @@ class StudiesController < ApplicationController
 
   def show
     @study = Study.find(params[:id])
+    render json: @study
   end
 
   def new
     @study = Study.new
+    render json: @study
   end
 
   def edit
     @study = Study.find(params[:id])
+    render json: @study
   end
 
   def destroy
